@@ -14,7 +14,7 @@ app.controller('MainCtrl', [
         ];
 
         $scope.addPost = function(){
-            if ($scope.title === '') {return;}
+            if (!$scope.title || $scope.title === '') {return;}
             $scope.posts.push({
                 title: $scope.title, 
                 link: $scope.link,
